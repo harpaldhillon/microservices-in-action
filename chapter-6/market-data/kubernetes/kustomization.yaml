@@ -1,0 +1,42 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Namespace to deploy resources
+namespace: default
+
+# Common labels applied to all resources
+commonLabels:
+  app: market-data
+  environment: production
+
+# Resources to include
+resources:
+  - deployment.yaml
+  - service.yaml
+
+# Images to customize
+images:
+  - name: containerssimplified/market-data
+    newTag: v1
+
+# ConfigMap generator (optional)
+# configMapGenerator:
+#   - name: fastapi-config
+#     literals:
+#       - LOG_LEVEL=info
+#       - WORKERS=4
+
+# Secret generator (optional)
+# secretGenerator:
+#   - name: fastapi-secrets
+#     literals:
+#       - DATABASE_URL=postgresql://user:pass@host/db
+
+# Replicas (can override the deployment replicas)
+# replicas:
+#   - name: fastapi-app
+#     count: 5
+
+# Patches (optional - for environment-specific changes)
+# patchesStrategicMerge:
+#   - patches/production.yaml

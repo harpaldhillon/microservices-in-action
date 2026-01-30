@@ -1,0 +1,13 @@
+version: '2'
+services:
+  market-data:
+    image: docker.io/containerssimplified/market-data:v1
+    build: ./market-data
+    mem_limit: 50m
+  holdings:
+    image: docker.io/containerssimplified/holdings:v1
+    build: ./holdings
+    links:
+      - market-data
+    ports:
+      - 8888:8001

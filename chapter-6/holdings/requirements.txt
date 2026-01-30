@@ -1,0 +1,8 @@
+flask
+gunicorn
+nose
+gevent
+marshmallow
+requests
+tenacity
+cachetools
