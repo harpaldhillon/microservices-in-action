@@ -9,6 +9,6 @@ spec:
   selector:
     app: market-data
   ports:
-  - port: 80
+  - port: 8000
     targetPort: 8000
     protocol: TCP
