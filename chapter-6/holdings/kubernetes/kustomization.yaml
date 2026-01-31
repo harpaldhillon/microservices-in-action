@@ -17,7 +17,7 @@ resources:
 # Images to customize
 images:
   - name: containerssimplified/holdings
-    newTag: v1
+    newTag: v2
 
 # ConfigMap generator (optional)
 # configMapGenerator:
