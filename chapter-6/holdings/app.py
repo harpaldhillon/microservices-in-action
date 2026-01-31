@@ -4,8 +4,11 @@ from flask import Flask, jsonify
 
 from holdings import queries
 
+from prometheus_fastapi_instrumentator import Instrumentator
+
 app = Flask(__name__)
 
+Instrumentator().instrument(app).expose(app)
 
 @app.route('/ping', methods=["GET"])
 def ping():
