@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: holdings
-        image: containerssimplified/holdings:v1  # Replace with your actual image
+        image: containerssimplified/holdings:v2  # Replace with your actual image
         ports:
         - containerPort: 8000
           name: http
