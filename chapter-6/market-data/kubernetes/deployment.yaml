@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: market-data
-        image: containerssimplified/market-data:v2  # Replace with your actual image
+        image: containerssimplified/market-data:v3  # Replace with your actual image
         ports:
         - containerPort: 8000
           name: http

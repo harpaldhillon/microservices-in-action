@@ -1,11 +1,11 @@
 version: '2'
 services:
   market-data:
-    image: docker.io/containerssimplified/market-data:v2
+    image: docker.io/containerssimplified/market-data:v3
     build: ./market-data
     mem_limit: 50m
   holdings:
-    image: docker.io/containerssimplified/holdings:v2
+    image: docker.io/containerssimplified/holdings:v3
     build: ./holdings
     links:
       - market-data
